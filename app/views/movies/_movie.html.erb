@@ -1,0 +1,14 @@
+<div class="card" style="width: 18rem;" id="<%= dom_id movie %>">
+  <img src="<%= movie.image_url%>" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= link_to movie.name, movie %></h5>
+    
+    <h6 class="card-subtitle mb-2 text-body-secondary">Directed by <%= movie.director %></h6>
+    <p class="card-text"><%= movie.description %></p>
+    <% if movie.user == current_user %>
+      <p>Added by you</p>
+    <% else %>
+      <p>Added by user <%= movie.user_id%></p>
+    <% end %>
+  </div>
+</div>

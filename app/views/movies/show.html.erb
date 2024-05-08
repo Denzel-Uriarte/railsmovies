@@ -1,0 +1,17 @@
+<div class="p-5 mb-4 bg-body-tertiary rounded-3 row">
+  <div class="col-md-3"> <!-- Adjust the column width as needed -->
+    <img src="<%= @movie.image_url%>" class="card-img" alt="...">
+  </div>
+  <div class="col-md-9">
+    <div class="container-fluid py-5">
+      <h1 class="display-5 fw-bold"><%= @movie.name %></h1>
+      <p class="">Directed by <%= @movie.name %> - Published at <%= @movie.release_date %></p>
+      <p class="fs-4"><%= @movie.description %></p>
+    </div>
+  </div>
+</div>
+<div class="d-flex" style="gap: 8px"> 
+  <%= link_to "Back", movies_path, class:"btn btn-dark" %>
+  <%= link_to "Edit", edit_movie_path(@movie),  class:"btn btn-secondary"  %>
+  <%= button_to "Delete", @movie, method: :delete, class:"btn btn-danger"  %>
+</div>

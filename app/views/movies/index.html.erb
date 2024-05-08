@@ -1,0 +1,9 @@
+<h1>Your saved movies</h1>
+
+<div id="movies" class="row flex-nowrap overflow-auto" style="gap: 1rem;">
+  <% @movies.each do |movie| %>
+    <% if movie.user_id == current_user.id %>
+      <%= render movie %>
+    <% end %>
+  <% end %>
+</div>
